@@ -1,0 +1,146 @@
+body{
+
+    background-color:#333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 98vh;
+}
+
+
+.main-container{
+    background-color: #121212;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3%;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    scale: .9;
+}
+
+.main-container:hover{
+    box-shadow:#bc85fd 0px 2px 4px 0px, #bc85fd 0px 2px 16px 0px;
+}
+
+.main-container h2{
+    font-size: 2.5rem;
+    color: #e3e3e3;
+    margin-bottom: 0rem;
+    font-weight: 800;
+}
+
+
+.sub-header{
+    font-size: .9rem;
+    color:#a6a6a6;
+    margin-top: .7rem;
+    margin-bottom: 0.5rem;
+    margin: 20px 25px;
+}
+
+.timelines{
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+    position:relative;
+}
+
+/*Verticla line*/
+.timelines::before{
+    content: '';
+    width: 2px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    left: 48.125%;
+    top: 0%;
+    bottom: 0%;
+    border-radius: 10px;
+}
+
+.timline{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 150px;
+    padding-top: 25px ;
+}
+
+.timline-date h3{
+    margin-bottom: 0rem;
+}
+
+.timeline-content p{
+    margin-top: 0rem;
+    font-size: 15px;
+}
+
+.timline:nth-child(odd){
+    margin-left: 300px;
+    text-align: left;
+    position: relative;
+}
+
+/*circles*/
+.timline:nth-child(odd)::before{
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    position:absolute;
+    left:-59.5px;
+}
+
+.timline:nth-child(even){
+    margin-left: 50px;
+    text-align: right;
+    position: relative;
+}
+
+/*more circles*/
+.timline:nth-child(even)::after{
+    content: '';
+    width: 12px;+
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    position:absolute;
+    right: -53px;
+}
+
+
+
+.timline-date{
+    color: #a1a1a1;
+}
+
+.timeline-content{
+    color: #dedede;
+}
+
+.button{
+    border: none;
+    margin-top: 40px;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 300px;
+    align-self: center;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: #bc85fd;
+    color: #070014;
+    cursor: pointer;
+    transition: all .3s ease;
+    border: 1px solid #bd85fd00;
+}
+
+
+.button:hover{
+    border: 1px solid #bc85fd;
+    background-color: #121212;
+    color: #bc85fd;
+}
+
